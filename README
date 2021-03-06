@@ -1,0 +1,23 @@
+About the potential:
+
+This potential is the Stillinger-Weber with a modification of the 3-body term.
+The constant epsilon is eliminated, and the cossine harmonic term is substituted by a piece-wise 3-order polynomial function over cossine of theta.
+The coefficients and number of pieces are to be given by the user.
+The space [-1,1] is discretized into N equal intervals. The i^th interval is then I_i=[x_{i-1},x_i], with i=1,...,N.
+The functional form over interval I_i will be:
+
+f_i(x) = a_i + b_i (x-x_i) + c_i (x-x_i)^2 + d_i (x-x_i)^3
+
+How to use it:
+
+Call of swpoly potential from input file is equivalent to sw.
+For the current version, only one set of coefficients can be given, which can be used for different interactions.
+But it is not currently possible to use different coefficients for different interactions.
+The coefficients for the 3-body term must be inside a file called coeffs.swpoly, that should be in the work directory (same as input file).
+This file have to contain the number of intervals in the first line, followed by the four coefficients for each interval (a_i, b_i, c_i and d_i) in every line.
+Comments are not accepted.
+
+Test run:
+
+In this test the potential is used only for 
+The correct potential energy for the test data file is: -182711.85.
