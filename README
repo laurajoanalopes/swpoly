@@ -16,8 +16,3 @@ But it is not currently possible to use different coefficients for different int
 The coefficients for the 3-body term must be inside a file called coeffs.swpoly, that should be in the work directory (same as input file).
 This file have to contain the number of intervals in the first line, followed by the four coefficients for each interval (a_i, b_i, c_i and d_i) in every line.
 Comments are not accepted.
-
-Test run:
-
-In this test the potential is used only for 
-The correct potential energy for the test data file is: -182711.85.
