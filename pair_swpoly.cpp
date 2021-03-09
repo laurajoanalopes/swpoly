@@ -13,6 +13,7 @@
 
 /* ----------------------------------------------------------------------
    Contributing author: Aidan Thompson (SNL)
+   Changed by Laura Lopes in the function for the cossine
 ------------------------------------------------------------------------- */
 
 #include "pair_swpoly.h"
@@ -556,14 +557,7 @@ void PairSWPOLY::read_file_coeffs()
     nwords = 0;
     words[nwords++] = strtok(line," \t\n\r\f");
     while ((words[nwords++] = strtok(NULL," \t\n\r\f"))) continue;
-    /*if (npieces == maxcoeffs) {
-      maxcoeffs += DELTA;
-      memory->create(swpoly_c0,swpoly_pieces,"pair:swpoly_c0");
-      memory->create(swpoly_c1,swpoly_pieces,"pair:swpoly_c1");
-      memory->create(swpoly_c2,swpoly_pieces,"pair:swpoly_c2");
-      memory->create(swpoly_c3,swpoly_pieces,"pair:swpoly_c3");
-	}*/
-	swpoly_c0[npieces]=atof(words[0]);
+    swpoly_c0[npieces]=atof(words[0]);
     swpoly_c1[npieces]=atof(words[1]);
     swpoly_c2[npieces]=atof(words[2]);
     swpoly_c3[npieces]=atof(words[3]);
